@@ -12,7 +12,9 @@ router.get('/', function(req, res) {
 })
 
 router.get('/search/:fruit', function (req, res) {
-  res.render('index', { title: 'Fruit Store | '+ req.params.fruit});
+
+
+  res.render('index', { title: 'Fruit Store | '+ req.params.fruit.capitalize()});
 });
 
 
@@ -57,5 +59,9 @@ router.get('/api/add', function(req, res) {
 
 })
 
+
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
 module.exports = router;
