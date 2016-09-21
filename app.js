@@ -3,10 +3,17 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose');
 
 const routes = require('./controllers/baseroutes');
 
 let app = express();
+
+// MongoDB
+mongoose.connect(process.env.MONGO_ACCESS);
+mongoose.connection.on('error', function() {
+  console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
+});
 
 app.set('view engine', 'pug');
 

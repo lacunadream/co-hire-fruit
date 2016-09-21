@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 let fruitSchema = new mongoose.Schema({
-	name: String, 
+	fruit: String, 
+	store: String, 
 	location: String, 
 	price: String, 
 	imageURL: String, 
