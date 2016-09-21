@@ -16,21 +16,61 @@ html
               a(href="#") Food Searches + 
             li#sub-nav
               a(href="#") Oranges
+            li#sub-nav
+              a(href="#") Pears
+            li#sub-nav
+              a(href="#") Grapes
 
+        #no-gutter(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2")
+          #top-buffer
+          div(class="col-xs-12" style="height:50px;")
+          div(class="col-sm-10 col-sm-offset-1 col-md-10 input-group input-group-lg")
+            input(type="text", class="form-control", placeholder="Enter a keyword", aria-describedby="basic-addon2")
+            span#basic-addon2(class="input-group-addon") Go
 
+          div(class="col-xs-12", style="height:70px;")  
+          span(class="grey-text") 450 Results
+
+          div(class="row border-top")
+            div(class="col-sm-3 col-md-2 vcenter")
+              img(src="https://dl.dropboxusercontent.com/u/43355605/4bMN4Grt2mPaGTBf.jpg")
+            div(class="col-sm-5 col-md-6 vcenter")
+              span
+                b Tesco
+                br
+              span London
+              br
+              span £0.50p
+                
+
+            div(class="col-sm-3 col-md-3 vcenter text-center")
+              button#buy(type="button", class="btn btn-primary") Buy
+              button(type="button", class="btn btn-primary") No, Skip
+              br
+              #hideshow
+                span show less
+                span(class="glyphicon glyphicon-menu-up" aria-hidden="true")
+
+          div#ratings(class="row border-top") 
+            div(class="col-sm-3 col-md-2 vcenter border-right text-right")
+              span
+                b Customer Review 1
+            div(class="col-sm-8 col-md-9 vcenter")
+            div(class="col-sm-3 col-md-2 vcenter border-right text-right")
+              span What did you think?
+              br
+              span Starred Rating
+            div(class="col-sm-8 col-md-9 vcenter")
+              span Really nice
+              br
+              span(class="glyphicon glyphicon-star", aria-hidden="true")
+              span(class="glyphicon glyphicon-star", aria-hidden="true")
+              span(class="glyphicon glyphicon-star", aria-hidden="true")
+              span(class="glyphicon glyphicon-star", aria-hidden="true")
+              span(class="glyphicon glyphicon-star", aria-hidden="true")
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", 
+  crossorigin="anonymous" )
+  script(src="/js/fruitscript.js")
 
-
-
-    h1= title
-    form#formAddUser(name="adduser",method="post",action="/")
-      p New mypf email to be created
-      input#inputUserName(type="text", placeholder="Just the name (ie before @)", name="mypfEmail")
-      p Email to forward 
-      input#inputUserEmail(type="text", placeholder="Forward to this email", name="forwardedEmail")
-      p Secret Key
-      input(type="text", placeholder="Secret Key", name="secret")
-      p
-      button#btnSubmit(type="submit") submit
