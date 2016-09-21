@@ -50,7 +50,7 @@ html
                 button#buy(type="button", class="btn btn-primary") Buy
                 button(type="button", class="btn btn-primary") No, Skip
                 br
-                #hideshow(ng-click="hideFunction(x._id)")
+                div(ng-click="hideFunction(x._id)", id="{{x._id}}")
                   span show more
                   span(class="glyphicon glyphicon-menu-down" aria-hidden="true")
 

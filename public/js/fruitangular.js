@@ -12,11 +12,11 @@ FruitsApp.controller('ListFruitsController', ['$scope', '$http', '$location', fu
     }
 
     //For showing and hiding data
-    $scope.hideFunction = function(id) {
-        console.log(id)
+    $scope.hideFunction = function(objId) {
+        console.log(objId)
 
-        var button = document.getElementById('hideshow');
-        var ratings = document.getElementsByClassName(id);
+        var button = document.getElementById(objId);
+        var ratings = document.getElementsByClassName(objId);
 
         if (ratings[0].style.display != "none") {
             button.innerHTML = '<span>show more </span><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>'
