@@ -1,0 +1,27 @@
+{
+  "name": "co-hire-fruit",
+  "version": "1.0.0",
+  "description": "coding test - davidyong",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lacunadream/co-hire-fruit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lacunadream/co-hire-fruit/issues"
+  },
+  "homepage": "https://github.com/lacunadream/co-hire-fruit#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.1",
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
