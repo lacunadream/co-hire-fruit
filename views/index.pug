@@ -6,8 +6,9 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
     link(rel='stylesheet', href='/css/fruits.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
 
-  body
+  body(ng-app="fruitsApp")
     div(class="container-fluid")
       div(class="row")
         div(class="col-sm-3 col-md-2 sidebar")
@@ -21,7 +22,7 @@ html
             li#sub-nav
               a(href="#") Grapes
 
-        #no-gutter(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2")
+        #no-gutter(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" ng-controller="ListFruitsController")
           #top-buffer
           div(class="col-xs-12" style="height:50px;")
           div(class="col-sm-10 col-sm-offset-1 col-md-10 input-group input-group-lg")
@@ -29,48 +30,48 @@ html
             span#basic-addon2(class="input-group-addon") Go
 
           div(class="col-xs-12", style="height:70px;")  
-          span(class="grey-text") 450 Results
+          span(class="grey-text") {{numberOfFruits}} Results
 
-          div(class="row border-top")
-            div(class="col-sm-3 col-md-2 vcenter")
-              img(src="https://dl.dropboxusercontent.com/u/43355605/4bMN4Grt2mPaGTBf.jpg")
-            div(class="col-sm-5 col-md-6 vcenter")
-              span
-                b Tesco
+          div(ng-repeat="x in records")
+            div(class="row border-top")
+              div(class="col-sm-3 col-md-2 vcenter")
+                img(src="{{x.imageURL}}")
+              div(class="col-sm-5 col-md-6 vcenter")
+                span
+                  b {{x.store}}
+                  br
+                span {{x.location}}
                 br
-              span London
-              br
-              span £0.50p
-                
+                span £{{x.price}}p
+                  
 
-            div(class="col-sm-3 col-md-3 vcenter text-center")
-              button#buy(type="button", class="btn btn-primary") Buy
-              button(type="button", class="btn btn-primary") No, Skip
-              br
-              #hideshow
-                span show less
-                span(class="glyphicon glyphicon-menu-up" aria-hidden="true")
+              div(class="col-sm-3 col-md-3 vcenter text-center")
+                button#buy(type="button", class="btn btn-primary") Buy
+                button(type="button", class="btn btn-primary") No, Skip
+                br
+                #hideshow(ng-click="hideFunction(x._id)")
+                  span show less
+                  span(class="glyphicon glyphicon-menu-up" aria-hidden="true")
 
-          div#ratings(class="row border-top") 
-            div(class="col-sm-3 col-md-2 vcenter border-right text-right")
-              span
-                b Customer Review 1
-            div(class="col-sm-8 col-md-9 vcenter")
-            div(class="col-sm-3 col-md-2 vcenter border-right text-right")
-              span What did you think?
-              br
-              span Starred Rating
-            div(class="col-sm-8 col-md-9 vcenter")
-              span Really nice
-              br
-              span(class="glyphicon glyphicon-star", aria-hidden="true")
-              span(class="glyphicon glyphicon-star", aria-hidden="true")
-              span(class="glyphicon glyphicon-star", aria-hidden="true")
-              span(class="glyphicon glyphicon-star", aria-hidden="true")
-              span(class="glyphicon glyphicon-star", aria-hidden="true")
+            div#ratings(class="row border-top {{x._id}}" ng-repeat="y in x.reviews") 
+              div(class="col-sm-3 col-md-2 vcenter border-right text-right")
+                span
+                  b Customer Review {{$index + 1}}
+              div(class="col-sm-8 col-md-9 vcenter")
+              div(class="col-sm-3 col-md-2 vcenter border-right text-right")
+                span What did you think?
+                br
+                span Starred Rating
+              div(class="col-sm-8 col-md-9 vcenter")
+                span {{y.review}}
+                br
+                span(class="glyphicon glyphicon-star", aria-hidden="true", ng-repeat="i in getNumber(y.score) track by $index")
+
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", 
   crossorigin="anonymous" )
-  script(src="/js/fruitscript.js")
+
+  script(src="/js/fruitangular.js")
+
 
