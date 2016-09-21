@@ -36,7 +36,7 @@ FruitsApp.controller('ListFruitsController', ['$scope', '$http', '$location', fu
 
     $http({
         method: "GET",
-        url: "http://localhost:5000/api/getfruits/" + fruitType[1]
+        url: "/api/getfruits/" + fruitType[1]
     }).then(function succes(response) {
         $scope.records = response.data;
         $scope.numberOfFruits = response.data.length
