@@ -12,7 +12,7 @@ let app = express();
 // MongoDB
 mongoose.connect(process.env.MONGO_ACCESS);
 mongoose.connection.on('error', function() {
-  console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
+  console.error(`MongoDB Connection Error - ${error}`);
 });
 
 app.set('view engine', 'pug');

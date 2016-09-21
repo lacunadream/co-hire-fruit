@@ -50,10 +50,10 @@ html
                 button(type="button", class="btn btn-primary") No, Skip
                 br
                 #hideshow(ng-click="hideFunction(x._id)")
-                  span show less
-                  span(class="glyphicon glyphicon-menu-up" aria-hidden="true")
+                  span show more
+                  span(class="glyphicon glyphicon-menu-down" aria-hidden="true")
 
-            div#ratings(class="row border-top {{x._id}}" ng-repeat="y in x.reviews") 
+            div#ratings(class="row border-top {{x._id}}" style="display:none" ng-repeat="y in x.reviews") 
               div(class="col-sm-3 col-md-2 vcenter border-right text-right")
                 span
                   b Customer Review {{$index + 1}}

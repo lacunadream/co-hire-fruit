@@ -7,6 +7,10 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
+router.get('/', function(req, res) {
+	res.redirect('/search/orange')
+})
+
 router.get('/search/:fruit', function (req, res) {
   res.render('index', { title: 'Fruit Store | '+ req.params.fruit});
 });

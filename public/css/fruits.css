@@ -20,17 +20,10 @@ li a:hover {
 	color: white;
 }
 
-/*#sub-nav {
-  position: relative;
-  display: block;
-  padding: 10px 35px;
-}*/
-
 .nav>li>a:hover {
 	background-color: #e0dede;
   opacity: 0.65;
 }
-
 
 #top-buffer {
 	height:40px;
@@ -40,6 +33,7 @@ li a:hover {
 	position:relative;
 }
 
+/*overwrote padding*/
 #no-gutter {
     padding-right:0;
     padding-left:0;
@@ -73,11 +67,6 @@ img {
   border-right:1px #e0dede solid
 }
 
-div span{
-  color: black;
-
-}
-
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -87,13 +76,15 @@ div span{
 .review-left{
   text-align: right
 }
+
+
+
 .btn-primary {
   background-color: #f2f0f0;
   border-color: #f2f0f0;
   color: black;
   margin: 10px 5px;
 }
-
 
 .btn-primary:hover {
   background-color: #e0dede;
