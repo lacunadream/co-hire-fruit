@@ -1,0 +1,14 @@
+html
+  head
+    title= title
+  body
+    h1= title
+    form#formAddUser(name="adduser",method="post",action="/")
+      p New mypf email to be created
+      input#inputUserName(type="text", placeholder="Just the name (ie before @)", name="mypfEmail")
+      p Email to forward 
+      input#inputUserEmail(type="text", placeholder="Forward to this email", name="forwardedEmail")
+      p Secret Key
+      input(type="text", placeholder="Secret Key", name="secret")
+      p
+      button#btnSubmit(type="submit") submit
