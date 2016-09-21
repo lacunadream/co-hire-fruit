@@ -1,0 +1,121 @@
+.sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+	background-color: #495969;
+}
+
+li a {
+	color: white;
+}
+
+li a:hover {
+	color: white;
+}
+
+/*#sub-nav {
+  position: relative;
+  display: block;
+  padding: 10px 35px;
+}*/
+
+.nav>li>a:hover {
+	background-color: grey;
+}
+
+/*.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 35px;
+}*/
+
+#top-buffer {
+	height:40px;
+	background-color:#f0f0f0;
+	/*padding: 10px 15px;*/
+	display:block;
+	position:relative;
+}
+
+#no-gutter {
+    padding-right:0;
+    padding-left:0;
+}
+
+.input-group-addon{
+  color: white;
+  background-color:#495969;
+}
+
+.grey-text {
+  color: #bcbaba;
+  padding-bottom: 15px;
+  display: inline-block;
+    padding: 10px 15px;
+  margin:5px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.border-top {
+  /*padding: 15px;*/
+  border-top:1px #e0dede solid
+}
+
+.border-right {
+  padding: 25px;
+  border-right:1px #e0dede solid
+}
+
+div span{
+  color: black;
+
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.review-left{
+  text-align: right
+}
+.btn-primary {
+  background-color: #f2f0f0;
+  border-color: #f2f0f0;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+.btn-primary:hover {
+  background-color: #e0dede;
+  border-color: #e0dede;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#buy {
+  color: #337ab7;
+}
+
+.reviewdropdown {
+  padding-top: 25px;
+  color: blue;
+}
+
+.glyphicon {
+  padding: 0px;
+  margin: 0px;
+}
