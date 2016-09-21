@@ -3,6 +3,7 @@
 ### Installation
 
 Upon cloning of the necessay files from git, run: ``` npm i``` and install all the modules
+Alternatively, heroku version can be accessed at: https://co-hire-fruit.herokuapp.com
 
 ### Requirements
 
@@ -29,7 +30,5 @@ Exposed this to the frontend via an api and ```angular```. ```pug``` and angular
 
 Not sure how much functionality was expected - built a straightforward skeleton. Bootstrap was used for styling, the would use a css precompiler if it were a larger project. 
 
-### Heroku
-Live verion can actually be found at: https://co-hire-fruit.herokuapp.com
 
 
