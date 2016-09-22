@@ -11,8 +11,8 @@ let app = express();
 
 // MongoDB
 mongoose.connect(process.env.MONGO_ACCESS);
-mongoose.connection.on('error', function() {
-  console.error(`MongoDB Connection Error - ${error}`);
+mongoose.connection.on('error', function(err) {
+  console.error(`MongoDB Connection Error - ${err}`);
 });
 
 app.set('view engine', 'pug');
