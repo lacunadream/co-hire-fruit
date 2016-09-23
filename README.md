@@ -3,6 +3,7 @@
 ### Installation
 
 Upon cloning of the necessay files from git, run: ``` npm i``` and install all the modules
+Alternatively, heroku version can be accessed at: https://co-hire-fruit.herokuapp.com
 
 ### Requirements
 
